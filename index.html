@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D3js Assignment</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            padding: 20 %;
+        }
+        
+        td {
+            border: 2px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;color:brown;">Rajya Sabha Data</h1><hr>
+    </header>
+    <p style="text-align: center; font-family: 'Courier New', Courier, monospace">Enter page number: <input type="number" name="PageNumber" value="" id='pageinput'>
+    Search by ministry name: <input type="text" name="MinistryName" value="" id="searchname"> </p>
+
+    <p>
+        Sort By:
+            <input type="checkbox" name="opt1" id="ministryN" value="ministry"> Ministry
+            <input type="checkbox" name="opt2" id="questionN" value="question"> Question Number
+            <input type="checkbox" name="opt3" id="idN" value="idnumber" > ID
+        Order By:
+            <input type="radio" name="Order" id="asc" value="ascending" > Ascending
+            <input type="radio" name="Order" id="dsc" value="descending" checked> Descending
+           
+        Question Type:
+            <input type="radio" name="typeq" id="starred" value="starred"> Starred
+            <input type="radio" name="typeq" id="unstarred" value="unstarred"> Unstarred
+            <input type="radio" name="typeq" id="allstar" value="allstar" checked> Both
+            
+           
+        
+        
+            
+    </p>
+    <button onclick="showtable()">Show Table</button>
+    <button onclick="showchart()">Show Bar Graph</button>
+    <hr>
+
+    
+
+    <h2 id="tableheader" style="text-align: center"></h2>
+    <div id="table"></div>
+    <h2 id="chartheader" style="text-align: center"></h2>
+    <svg class="bar-chart" style="padding: 40px"></svg>
+
+    
+    
+
+</body>
+
+</html>
